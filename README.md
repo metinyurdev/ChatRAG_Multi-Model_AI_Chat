@@ -32,6 +32,14 @@ Watch the project demo video below:
 | ![LangChain](https://img.shields.io/badge/LangChain-%23FFD43B?style=flat&logo=langchain&logoColor=black) | LLM integration |
 | ![Ollama](https://img.shields.io/badge/Ollama-AI-green?style=flat&logo=ollama) | Running AI models |
 
+
+## 🤖 AI Models:
+- **Phi-3:latest**: ![Phi-3](https://img.shields.io/badge/Phi--3-AI-blue?style=for-the-badge&logo=ai&logoColor=white)   
+- **Qwen2.5:3B**: ![Qwen2.5](https://img.shields.io/badge/Qwen2.5--3B-AI-green?style=for-the-badge&logo=ai&logoColor=white)     
+- **Llama3.2:latest**: ![Llama3.2](https://img.shields.io/badge/Llama3.2--latest-AI-orange?style=for-the-badge&logo=ai&logoColor=white)     
+- **Deepseek-R1:8B**: ![Deepseek-R1](https://img.shields.io/badge/Deepseek--R1--8B-AI-purple?style=for-the-badge&logo=ai&logoColor=white)       
+
+
 ## 📂 Project Structure
 ```
 chat_rag/

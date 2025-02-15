@@ -157,14 +157,13 @@ def generative_ai_response(prompt_chain):
 
 def build_prompt_chain():
     prompt_sequence = [SystemMessagePromptTemplate.from_template( 
-        {
-        "You are an expert AI assistant. You are a RAG (Retrieval-Augmented Generation) model," 
-        "Comment on any programming language code given to you by the user, correct it and"
+        
+        "You are an expert AI assistant. Comment on any programming"
+        "language code given to you by the user, correct it and"
         "give him the answer he wants. If necessary, reorganize the code and present it to him."
         "and your primary goal is to provide quick, accurate, and effective answers to users' questions." 
         "You must generate responses in English, but if the user specifically requests a response "
         "in Turkish, you can answer in Turkish."
-    }
 
     )]
     
