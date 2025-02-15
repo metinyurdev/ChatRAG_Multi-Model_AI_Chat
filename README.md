@@ -19,6 +19,7 @@ Chat RAG is a user-friendly, Retrieval-Augmented Generation (RAG)-powered AI cha
 Watch the project demo video below:
 
 ! **Watch Video:** [Video](Project_Demo_Video.mp4)
+
 ! **Watch Video from DRIVE:** [Video_Drive](https://drive.google.com/drive/folders/1gc_4sFwvqIUtBIweVcc1092NjRsN2j2B)
 
 
@@ -34,9 +35,10 @@ Watch the project demo video below:
 ## 📂 Project Structure
 ```
 chat_rag/
+│── mynewenv # Python virtual environment
 │── app.py  # Main application file
 │── history.json  # Stores the last 8 messages
-│── proje_ekran_kaydi.mp4  # Demo video file
+│── Project_Demo_Video.mp4  # Demo video file
 │── requirements.txt  # Dependencies
 └── README.md  # Project documentation
 ```
