@@ -1,9 +1,9 @@
 # 🔎 Chat RAG - AI Chatbot with Multi-Model Support
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.0-red?style=for-the-badge&logo=streamlit)
-![LangChain](https://img.shields.io/badge/LangChain-%23FFD43B?style=for-the-badge&logo=langchain&logoColor=black)
-![Ollama](https://img.shields.io/badge/Ollama-AI-green?style=for-the-badge&logo=ollama)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python) 
+![Streamlit](https://img.shields.io/badge/Streamlit-1.0-red?style=for-the-badge&logo=streamlit) 
+![LangChain](https://img.shields.io/badge/LangChain-%23FFD43B?style=for-the-badge&logo=langchain&logoColor=black)   
+![Ollama](https://img.shields.io/badge/Ollama-AI-green?style=for-the-badge&logo=ollama) 
 
 ## 📌 Project Description
 Chat RAG is a user-friendly, Retrieval-Augmented Generation (RAG)-powered AI chatbot. Users can select one of four different models via the toggle bar in the upper right corner and start chatting. Chat history is stored in `.json` format and can be accessed from the left side of the page.
