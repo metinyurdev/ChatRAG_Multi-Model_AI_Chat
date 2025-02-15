@@ -19,7 +19,7 @@ Chat RAG is a user-friendly, Retrieval-Augmented Generation (RAG)-powered AI cha
 Watch the project demo video below:
 
 ! **Watch Video:** [Video](Project_Demo_Video.mp4)
-
+! **Watch Video from DRIVE:** [Video_Drive](https://drive.google.com/drive/folders/1gc_4sFwvqIUtBIweVcc1092NjRsN2j2B)
 
 
 ## 🚀 Technologies Used
@@ -45,8 +45,8 @@ chat_rag/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/metinyurdev/chat_rag.git
-cd chat_rag
+git clone https://github.com/metinyurdev/ChatRAG_Multi-Model_AI_Chat
+cd ChatRAG_Multi-Model_AI_Chat
 ```
 
 ### 2️⃣ Install Dependencies
