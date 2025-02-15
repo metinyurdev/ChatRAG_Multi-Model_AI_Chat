@@ -10,7 +10,7 @@ from langchain_core.prompts import (
     AIMessagePromptTemplate,
     ChatPromptTemplate
 )
-import time  # time modülünü ekleyin
+import time  
 
 # Hide Chat History
 HISTORY_FILE = "chat_history.json"
@@ -34,24 +34,24 @@ def clear_chat_history():
     st.rerun()
 
 # Set Page Theme(Night/Daytime Mode)
-current_hour = 10 #datetime.now().hour
+current_hour = datetime.now().hour
 
 if 18 <= current_hour or current_hour < 6:
     background_color = "#1a1a1a"
     text_color = "#ffffff"
     sidebar_bg = "#2d2d2d"
     button_color = "#ff4444"
-    button_text_color = "#ffffff"  # Buton yazı rengi
-    input_background_color = "#2d2d2d"  # Giriş kutusu arka plan rengi (gece)
-    input_text_color = "#ffffff"  # Giriş kutusu yazı rengi (gece)
+    button_text_color = "#ffffff"  
+    input_background_color = "#2d2d2d"  
+    input_text_color = "#ffffff"  
 else:
     background_color = "#f5f5f5"
     text_color = "#333333"
     sidebar_bg = "#ffffff"
     button_color = "#d9534f"
-    button_text_color = "#ffffff"  # Buton yazı rengi
-    input_background_color = "#ffffff"  # Giriş kutusu arka plan rengi (gündüz)
-    input_text_color = "#333333"  # Giriş kutusu yazı rengi (gündüz)
+    button_text_color = "#ffffff"  
+    input_background_color = "#ffffff"  
+    input_text_color = "#333333"  
 
 # Night/Daytime Mode Style with CSS
 st.markdown(f"""
@@ -74,7 +74,7 @@ st.markdown(f"""
         div[data-testid="stSidebar"] button:hover {{
             background-color: #cc0000 !important;
         }}
-        /* Diğer elementler için genel renk ayarları */
+        
         .stButton > button {{
             background-color: {button_color} !important;
             color: {button_text_color} !important;
@@ -82,11 +82,11 @@ st.markdown(f"""
         .stButton > button:hover {{
             background-color: #cc0000 !important;
         }}
-        /* Yazıların rengini sabit tut */
+        
         .stMarkdown, .stChatMessageContent, .stTextInput > label, .stSelectbox > label, .stSlider > label {{
             color: {text_color} !important;
         }}
-        /* Mesaj yazma kutusu (input) için stil */
+        
         .stTextInput > div > div > input {{
             background-color: {input_background_color} !important;
             color: {input_text_color} !important;
@@ -156,11 +156,16 @@ def generative_ai_response(prompt_chain):
     return processing_pipeline.invoke({})
 
 def build_prompt_chain():
-    prompt_sequence = [SystemMessagePromptTemplate.from_template(
+    prompt_sequence = [SystemMessagePromptTemplate.from_template( 
+        {
         "You are an expert AI assistant. You are a RAG (Retrieval-Augmented Generation) model," 
+        "Comment on any programming language code given to you by the user, correct it and"
+        "give him the answer he wants. If necessary, reorganize the code and present it to him."
         "and your primary goal is to provide quick, accurate, and effective answers to users' questions." 
         "You must generate responses in English, but if the user specifically requests a response "
         "in Turkish, you can answer in Turkish."
+    }
+
     )]
     
     for msg in st.session_state.message_log:
