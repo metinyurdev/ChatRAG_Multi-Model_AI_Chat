@@ -34,18 +34,24 @@ def clear_chat_history():
     st.rerun()
 
 # Set Page Theme(Night/Daytime Mode)
-current_hour = datetime.now().hour
+current_hour = 10 #datetime.now().hour
 
 if 18 <= current_hour or current_hour < 6:
     background_color = "#1a1a1a"
     text_color = "#ffffff"
     sidebar_bg = "#2d2d2d"
     button_color = "#ff4444"
+    button_text_color = "#ffffff"  # Buton yazı rengi
+    input_background_color = "#2d2d2d"  # Giriş kutusu arka plan rengi (gece)
+    input_text_color = "#ffffff"  # Giriş kutusu yazı rengi (gece)
 else:
     background_color = "#f5f5f5"
     text_color = "#333333"
     sidebar_bg = "#ffffff"
     button_color = "#d9534f"
+    button_text_color = "#ffffff"  # Buton yazı rengi
+    input_background_color = "#ffffff"  # Giriş kutusu arka plan rengi (gündüz)
+    input_text_color = "#333333"  # Giriş kutusu yazı rengi (gündüz)
 
 # Night/Daytime Mode Style with CSS
 st.markdown(f"""
@@ -62,11 +68,32 @@ st.markdown(f"""
         }}
         div[data-testid="stSidebar"] button {{
             background-color: {button_color} !important;
-            color: white !important;
+            color: {button_text_color} !important;
             border-radius: 5px;
         }}
         div[data-testid="stSidebar"] button:hover {{
             background-color: #cc0000 !important;
+        }}
+        /* Diğer elementler için genel renk ayarları */
+        .stButton > button {{
+            background-color: {button_color} !important;
+            color: {button_text_color} !important;
+        }}
+        .stButton > button:hover {{
+            background-color: #cc0000 !important;
+        }}
+        /* Yazıların rengini sabit tut */
+        .stMarkdown, .stChatMessageContent, .stTextInput > label, .stSelectbox > label, .stSlider > label {{
+            color: {text_color} !important;
+        }}
+        /* Mesaj yazma kutusu (input) için stil */
+        .stTextInput > div > div > input {{
+            background-color: {input_background_color} !important;
+            color: {input_text_color} !important;
+        }}
+        .stTextInput > div > div > input::placeholder {{
+            color: {input_text_color} !important;
+            opacity: 0.7; /* Placeholder rengini biraz daha açık yap */
         }}
     </style>
 """, unsafe_allow_html=True)
